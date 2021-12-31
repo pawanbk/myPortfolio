@@ -212,7 +212,7 @@
                     <div class="socials">
                       <ul>
                           @foreach($links as $link)
-                        <li><a href="{{$link->sociallink}}"><span class="ico-circle"><i class="$link->icon"></i></span></a></li>
+                        <li><a href="{{$link->social_link}}"><span class="ico-circle"><i class="{{$link->icon}}"></i></span></a></li>
                         @endforeach
                       </ul>
                     </div>

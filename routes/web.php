@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SitesettingController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\SociallinkController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
@@ -40,21 +41,21 @@ Route::group(['prefix' => 'admin',
                 // skill 
                 Route::get('/skills',[SkillController::class, 'index'])->name('skill');
                 Route::post('/add/skill',[SkillController::class, 'store'])->name('skill.store');
-                Route::post('/delete/skill/{id}',[SkillController::class, 'delete'])->name('skill.delete');
+                Route::get('/delete/skill/{id}',[SkillController::class, 'delete'])->name('skill.delete');
 
                 // service 
                 Route::get('/services',[ServiceController::class, 'index'])->name('service');
                 Route::post('/add/service',[ServiceController::class, 'store'])->name('service.store');
-                Route::Post('/delete/service/{id}',[ServiceController::class, 'delete'])->name('service.delete');
+                Route::get('/delete/service/{id}',[ServiceController::class, 'delete'])->name('service.delete');
 
                 // sociallinks
-                Route::get('/sociallinks',[SocaillinkController::class, 'index'])->name('link');
+                Route::get('/sociallinks',[SociallinkController::class, 'index'])->name('link');
                 Route::post('/sociallink/add',[SociallinkController::class,'store'])->name('link.store');
-                Route::post('/delete/sociallink/{id}',[SociallinkController::class,'delete'])->name('link.delete');
+                Route::get('/delete/sociallink/{id}',[SociallinkController::class,'delete'])->name('link.delete');
 
                 // mail 
                 Route::get('/mails',[MailController::class,'index'])->name('mail');
-                Route::post('delete/mail/{id}',[MailController::class,'delete'])->name('mail.delete');
+                Route::get('delete/mail/{id}',[MailController::class,'delete'])->name('mail.delete');
         });
 
            
