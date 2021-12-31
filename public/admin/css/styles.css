@@ -1,0 +1,294 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.fa{
+  padding: 0 20px;
+}
+
+body{
+  font-size:2vmin;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a{
+  text-decoration:none;
+  color:whitesmoke;
+}
+.close{
+  right:0;
+  color:whitesmoke;
+  font-size: 5vmin;
+}
+
+input, button {
+  font-family: "Poppins-Regular";
+  font-size: 15px;
+  color: #666
+}
+header#nav{
+  display:flex;
+  top:0;
+  left:200px;
+  right:0;
+  position:fixed;
+  flex-direction:row;
+  width:calc(100% - 200px);
+  height:50px;
+  align-items:center;
+  border:1px solid #faf0e6;
+  
+}
+header .navbrand{
+  font-size:3vmin;
+  padding:0 20px;
+  text-transform: uppercase;
+
+}
+header .nav-right{
+  display:flex;
+  align-items:flex-end;
+  justify-content: center;
+  border:1px solid crimson;
+  color:crimson;
+  padding:5px;
+  width:100px;
+  border-radius:10px;
+}
+
+header .nav-right:hover{
+  cursor: pointer;
+  background:crimson;
+  color:whitesmoke;
+  transition: .5s ease;
+}
+.nav-right img{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+}
+.nav-right i{
+  font-weight: bold;
+  font-size: 3vmin;
+  padding: 0 20px;
+}
+
+header .menu-bar{
+  padding:10px; 
+  border:none;
+  display:none;
+}
+
+
+header .menu-bar button{
+  font-size:3vmin;
+  color:crimson;
+  background:none;
+  border:none;
+}
+section#side-nav{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:200px;
+  background:#2C1510;
+  height:100vh;
+  position:fixed;
+  top:0;
+}
+.flex{
+  display:flex !important;
+  top:50px !important;
+}
+
+section#side-nav ul{
+  list-style-type: none;
+  padding: 50px 0;
+}
+
+section#side-nav ul li{
+  text-transform: uppercase;
+  padding: 20px;
+}
+section#side-nav ul li:hover{
+  background:crimson;
+}
+
+/* section#side-nav ul li a::after{
+  content:'';
+  display:block;
+  width:0;
+  height:4px;
+  transition:1s ease;
+  background:crimson
+} */
+
+/* section#side-nav ul li a:hover::after{
+  width:100%;
+} */
+
+
+/* profile page */
+.wrapper {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-top:100px;
+  justify-content: center;
+}
+
+.wrapper form {
+  width: 100%
+}
+#wizard {
+  width:50%;
+  background: #fff;
+  padding: 107px 75px 65px;
+  margin:auto;
+}
+#wizard h4{
+  margin-top:10px;
+  margin-bottom:20px;
+  text-transform: uppercase;
+}
+.form-row {
+  margin-bottom: 24px;
+  flex-direction:column;
+}
+
+.form-row label {
+  margin-bottom: 8px;
+  display: block
+}
+
+.form-control {
+  height: 42px;
+  border: 1px solid #e6e6e6;
+  background: none;
+  width: 100%;
+  padding: 0 18px
+}
+
+.form-control:focus {
+  border-color: #f3d4b7
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999;
+  font-size: 13px
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+  font-size: 13px
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999;
+  font-size: 13px
+}
+
+.form-control:-moz-placeholder {
+  color: #999;
+  font-size: 13px
+}
+.form-row .btn{
+  width:100px;
+  margin:auto;
+  padding:10px;
+  background:crimson;
+  color: whitesmoke;
+  text-transform: capitalize;
+  border:none;
+}
+.btn:hover{
+  cursor: pointer;
+  background:white;
+  border:1px solid crimson;
+  color:crimson;
+  transition: .5s ease-in-out;
+}
+
+.form-row img{
+  width:50vmin;
+  height:50vmin;
+}
+
+/*end profile*/
+
+/* table */
+/* section.content{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+} */
+.heading-section {
+  font-size: 28px;
+  color: #000; 
+}
+table {
+  border-collapse: collapse; 
+}
+.table {
+width: 100%;
+background: #fff; 
+}
+.table thead.thead-primary {
+  background: #ccc; 
+}
+.table thead th {
+  border: none;
+  padding: 20px 30px;
+  font-size: 14px;
+  color: #fff; 
+}
+.table tbody tr {
+  margin-bottom: 10px; 
+}
+.table tbody th, .table tbody td {
+  border: none;
+  padding: 20px 30px;
+  border-bottom: 3px solid #f8f9fd;
+  font-size: 14px; 
+}
+
+@media (max-width:800px){
+  header#nav{
+      width:100%;
+      left:0;
+      justify-content: space-between;
+  }
+  header .menu-bar{
+      display:block;
+  }
+  header .nav-right{
+      display:none;
+  }
+  section#side-nav{
+      display:none;
+      width:100%;
+      opacity:.9;
+  }
+  .wrapper{
+      width:100%;
+      margin:auto;
+      padding-top:100px;
+  }
+  .wrapper .wizard{
+    width:50%;
+    margin:auto;
+  }
+  .form-row{
+    width:100%;
+    display:flex;
+  }
+
+  .table{
+    width:20%;
+  }
+
+}
